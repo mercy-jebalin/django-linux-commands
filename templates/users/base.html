@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% if title %}
+        <title>{{title}}</title>
+    {% else %}
+        <title>COMMAND PROMT PROJECT</title>
+    {% endif %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "aquamarine");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "cyan");
+  });
+});
+    $(document).ready(function(){
+  $(".command").click(function(){
+    $(".meaning").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#c1").click(function(){
+    $("#m1").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#c2").click(function(){
+    $("#m2").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#c3").click(function(){
+    $("#m3").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#c4").click(function(){
+    $("#m4").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#c5").click(function(){
+    $("#m5").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#c6").click(function(){
+    $("#m6").slideToggle("slow");
+  });
+});
+</script>
+    <style>
+          .meaning,#m1,#m3,#m5, .command ,#c1,#c3,#c5{
+  padding: 5px;
+  text-align: center;
+  background-color: #ebf59f;
+  border: solid 1px #c3c3c3;
+}
+#m2,#m4,#m6,#c2,#c4,#c6{
+  padding: 5px;
+  text-align: center;
+  background-color: #eb348f;
+  border: solid 1px #c3c3c3;
+}
+.meaning,#m1,#m2,#m3,#m4,#m5,#m6 {
+  padding: 30px;
+  display: none;
+}
+          nav {
+              border:1px;
+              background-color:purple;
+              color:black;
+              padding:6px;
+          }
+          a {
+              text-decoration:none;
+              color:white;
+              font-size:20px;
+          }
+          .title {
+              font-size:40px;
+              color:purple;
+              font-weight:bold;
+              text-align:center;
+          }
+          .sub {
+              text-align:center;
+              margin:30px 0;
+          }
+          body{
+               background-color:#e9d8ff
+          }
+      </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="title">
+      <h1>WELCOME</h1></div>
+    <div class="sub">
+    <p>Type a command in the text box to and press the button to run the command.</p>
+  </div>
+    </div>
+    <nav>
+    <div align="right">
+        <a href ="home">Home</a> | <a href ="help">Help</a> | <a href ="about">About</a> | <a href ="contact">Contact</a>
+    </div>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

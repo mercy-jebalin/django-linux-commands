@@ -1,0 +1,10 @@
+{% extends 'users/base.html'%}
+{% block content %}
+<form method="post" action="db">
+  {% csrf_token %}
+  Name     : <input type="text" name="u"><br>
+  Email    : <input type="email" name="e"><br>
+  Feedback : <input type="text" name="f"><br>
+  <input type="submit">
+</form>
+{% endblock content %}
